@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="countdown">
+  <head>
+    <meta charset="utf-8">
+    <title>Countdown</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="countdown.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style type="text/css">
+      .container-narrow {
+        margin: 3em auto;
+        max-width: 500px;
+      }
+      .hero-unit h1 {
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="CountDownCtrl" class="container-narrow text-center">
+	<div class="hero-unit">
+		<p>Countdown to {{cd.end | date:"d.M.yyyy"}}:</p>
+		<h1>{{cd.days}}</h1>
+		<p>working days left</p>
+	</div>
+    </div>
+  </body>
+</html>
